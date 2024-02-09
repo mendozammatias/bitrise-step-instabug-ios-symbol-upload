@@ -36,8 +36,6 @@ inputs:
       summary: Instabug App Token for the given environment.
       is_required: true
   - workdir: $BITRISE_SOURCE_DIR
-  opts:
-    title: Working directory
-    description: |
-      Working directory of the step.
-      You can leave it empty to not change it.
+    opts:
+      title: Working directory
+      summary: Working directory of the step. You can leave it empty to not change it.
