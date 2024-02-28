@@ -6,7 +6,7 @@ description: |-
   ### Configuring the Step
   1. Add the **Instabug iOS Symbol Upload** Step to your Workflow after any build Step.
   2. Set the **Working directory**.
-  3. Set the **Instabug App Token**. It's highly recommended to have this value in an env var and reference that.
+  3. Set the **Instabug App Token**. It's highly recommended to have this value in a secret env var and reference that.
 
   ### Troubleshooting
   Make sure you insert the Step after any build Step so that every dependency and env var is already setted.
@@ -17,7 +17,6 @@ support_url: https://github.com/mendozammatias/bitrise-step-instabug-ios-symbol-
 
 project_type_tags:
   - ios
-  - xamarin
   - react-native
   - cordova
   - flutter
@@ -35,6 +34,7 @@ inputs:
       title: Instabug App Token
       summary: Instabug App Token for the given environment.
       is_required: true
+      is_sensitive: true
   - workdir: $BITRISE_SOURCE_DIR
     opts:
       title: Working directory
